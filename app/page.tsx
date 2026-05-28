@@ -8,11 +8,13 @@ export default function Home() {
 
         minHeight: "100vh",
 
-        padding: "30px",
+        padding: "20px",
+
+        fontFamily: "Arial, sans-serif",
 
         backgroundImage:
 
-          "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop')",
+          "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop')",
 
         backgroundSize: "cover",
 
@@ -20,13 +22,9 @@ export default function Home() {
 
         color: "white",
 
-        fontFamily: "Arial, sans-serif",
-
       }}
 
     >
-
-      {/* tmavé překrytí */}
 
       <div
 
@@ -34,27 +32,21 @@ export default function Home() {
 
           background: "rgba(0,0,0,0.55)",
 
-          minHeight: "100vh",
-
           borderRadius: "24px",
 
-          padding: "30px",
+          padding: "24px",
 
         }}
 
       >
 
-        {/* Logo */}
-
         <h1
 
           style={{
 
-            fontSize: "72px",
+            fontSize: "46px",
 
-            fontWeight: "bold",
-
-            marginBottom: "10px",
+            margin: "0 0 12px 0",
 
           }}
 
@@ -68,11 +60,11 @@ export default function Home() {
 
           style={{
 
-            fontSize: "28px",
+            fontSize: "22px",
 
-            color: "#e5e7eb",
+            lineHeight: "1.3",
 
-            marginBottom: "40px",
+            marginBottom: "28px",
 
           }}
 
@@ -82,227 +74,57 @@ export default function Home() {
 
         </p>
 
-        {/* Menu */}
-
         <div
 
           style={{
 
-            display: "flex",
+            display: "grid",
 
-            flexWrap: "wrap",
+            gridTemplateColumns: "1fr 1fr",
 
-            gap: "20px",
+            gap: "14px",
 
-            marginBottom: "40px",
+            marginBottom: "28px",
 
           }}
 
         >
 
-          {[
+          <button style={btn}>🏢<br />Firmy</button>
 
-            ["🏢", "Firmy"],
+          <button style={btn}>👷<br />Řemeslníci</button>
 
-            ["👷", "Řemeslníci"],
+          <button style={btn}>🚛<br />Materiál</button>
 
-            ["🚛", "Materiál"],
+          <button style={btn}>📋<br />Poptávky</button>
 
-            ["📋", "Poptávky"],
-
-            ["📞", "Kontakt"],
-
-          ].map(([icon, text]) => (
-
-            <div
-
-              key={text}
-
-              style={{
-
-                background: "white",
-
-                color: "#111827",
-
-                width: "180px",
-
-                height: "140px",
-
-                borderRadius: "24px",
-
-                display: "flex",
-
-                flexDirection: "column",
-
-                justifyContent: "center",
-
-                alignItems: "center",
-
-                fontWeight: "bold",
-
-                fontSize: "28px",
-
-                boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-
-              }}
-
-            >
-
-              <div style={{ fontSize: "42px", marginBottom: "10px" }}>
-
-                {icon}
-
-              </div>
-
-              {text}
-
-            </div>
-
-          ))}
+          <button style={btn}>📞<br />Kontakt</button>
 
         </div>
 
-        {/* Nové firmy */}
-
-        <div
+        <section
 
           style={{
 
-            background: "rgba(255,255,255,0.92)",
-
-            borderRadius: "30px",
-
-            padding: "30px",
+            background: "white",
 
             color: "#111827",
 
-            boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+            borderRadius: "24px",
+
+            padding: "24px",
 
           }}
 
         >
 
-          <h2
+          <h2 style={{ fontSize: "34px" }}>Nové firmy</h2>
 
-            style={{
+          <p>🏠 Stavby Novák s.r.o.</p>
 
-              fontSize: "52px",
+          <p>⚡ Elektro Kladno</p>
 
-              marginBottom: "30px",
-
-            }}
-
-          >
-
-            Nové firmy
-
-          </h2>
-
-          {[
-
-            ["🏠", "Stavby Novák s.r.o.", "Stavební práce"],
-
-            ["⚡", "Elektro Kladno", "Elektroinstalace"],
-
-            ["🪚", "Truhlářství Beneš", "Truhlářské práce"],
-
-          ].map(([icon, title, desc]) => (
-
-            <div
-
-              key={title}
-
-              style={{
-
-                background: "white",
-
-                borderRadius: "20px",
-
-                padding: "20px",
-
-                marginBottom: "20px",
-
-                display: "flex",
-
-                alignItems: "center",
-
-                gap: "20px",
-
-                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-
-              }}
-
-            >
-
-              <div
-
-                style={{
-
-                  width: "70px",
-
-                  height: "70px",
-
-                  borderRadius: "18px",
-
-                  background: "#f59e0b",
-
-                  display: "flex",
-
-                  alignItems: "center",
-
-                  justifyContent: "center",
-
-                  fontSize: "36px",
-
-                }}
-
-              >
-
-                {icon}
-
-              </div>
-
-              <div>
-
-                <div
-
-                  style={{
-
-                    fontSize: "28px",
-
-                    fontWeight: "bold",
-
-                  }}
-
-                >
-
-                  {title}
-
-                </div>
-
-                <div
-
-                  style={{
-
-                    color: "#6b7280",
-
-                    fontSize: "22px",
-
-                  }}
-
-                >
-
-                  {desc}
-
-                </div>
-
-              </div>
-
-            </div>
-
-          ))}
-
-          {/* tlačítko */}
+          <p>🪚 Truhlářství Beneš</p>
 
           <button
 
@@ -310,9 +132,11 @@ export default function Home() {
 
               width: "100%",
 
-              padding: "22px",
+              marginTop: "18px",
 
-              borderRadius: "20px",
+              padding: "16px",
+
+              borderRadius: "16px",
 
               border: "none",
 
@@ -320,11 +144,9 @@ export default function Home() {
 
               color: "white",
 
-              fontSize: "28px",
+              fontSize: "20px",
 
               fontWeight: "bold",
-
-              marginTop: "10px",
 
             }}
 
@@ -334,12 +156,30 @@ export default function Home() {
 
           </button>
 
-        </div>
+        </section>
 
       </div>
 
     </main>
 
-  )
+  );
 
 }
+
+const btn = {
+
+  background: "white",
+
+  color: "#111827",
+
+  border: "none",
+
+  borderRadius: "20px",
+
+  padding: "18px 10px",
+
+  fontSize: "18px",
+
+  fontWeight: "bold",
+
+};
