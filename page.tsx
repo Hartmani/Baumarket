@@ -8,13 +8,13 @@ export default function Home() {
 
         minHeight: "100vh",
 
-        padding: "32px",
+        backgroundImage:
 
-        fontFamily: "Arial",
+          "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')",
 
-        background:
+        backgroundSize: "cover",
 
-          "linear-gradient(135deg, #0f172a 0%, #1f2937 45%, #f97316 100%)",
+        padding: "40px",
 
         color: "white",
 
@@ -22,74 +22,14 @@ export default function Home() {
 
     >
 
-      <h1 style={{ fontSize: "56px" }}>🏠 Baumarket</h1>
+      <h1 style={{ fontSize: "60px" }}>
 
-      <p style={{ fontSize: "24px" }}>
+        Baumarket TEST
 
-        Spojujeme stavebníky ve Středočeském kraji.
-
-      </p>
-
-      <div style={{ display: "grid", gap: "14px", marginTop: "30px" }}>
-
-        <button style={btn}>🏢 Firmy</button>
-
-        <button style={btn}>👷 Řemeslníci</button>
-
-        <button style={btn}>🧱 Materiál</button>
-
-        <button style={btn}>📋 Poptávky</button>
-
-        <button style={btn}>☎️ Kontakt</button>
-
-      </div>
-
-      <section style={card}>
-
-        <h2>⭐ Nové firmy</h2>
-
-        <p>🏠 Stavby Novák s.r.o.</p>
-
-        <p>⚡ Elektro Kladno</p>
-
-        <p>🪚 Truhlářství Beneš</p>
-
-      </section>
+      </h1>
 
     </main>
 
   );
 
 }
-
-const btn = {
-
-  background: "white",
-
-  color: "#111827",
-
-  border: "none",
-
-  padding: "18px",
-
-  borderRadius: "18px",
-
-  fontSize: "22px",
-
-  fontWeight: "bold",
-
-};
-
-const card = {
-
-  background: "white",
-
-  color: "black",
-
-  padding: "24px",
-
-  borderRadius: "24px",
-
-  marginTop: "32px",
-
-};
