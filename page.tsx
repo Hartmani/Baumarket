@@ -2,34 +2,22 @@ export default function Home() {
 
   return (
 
-    <main
+    <main style={{
 
-      style={{
+      minHeight: "100vh",
 
-        minHeight: "100vh",
+      background: "red",
 
-        backgroundImage:
+      color: "white",
 
-          "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')",
+      padding: "40px"
 
-        backgroundSize: "cover",
+    }}>
 
-        padding: "40px",
-
-        color: "white",
-
-      }}
-
-    >
-
-      <h1 style={{ fontSize: "60px" }}>
-
-        Baumarket TEST
-
-      </h1>
+      <h1>TEST</h1>
 
     </main>
 
-  );
+  )
 
 }
