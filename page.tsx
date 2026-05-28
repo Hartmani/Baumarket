@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function Home() {
 
   return (
 
@@ -8,15 +8,13 @@ export default function HomePage() {
 
         minHeight: "100vh",
 
-        padding: "40px",
+        padding: "32px",
 
-        backgroundImage:
+        fontFamily: "Arial",
 
-          "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200')",
+        background:
 
-        backgroundSize: "cover",
-
-        backgroundPosition: "center",
+          "linear-gradient(135deg, #0f172a 0%, #1f2937 45%, #f97316 100%)",
 
         color: "white",
 
@@ -24,109 +22,39 @@ export default function HomePage() {
 
     >
 
-      <div
+      <h1 style={{ fontSize: "56px" }}>🏠 Baumarket</h1>
 
-        style={{
+      <p style={{ fontSize: "24px" }}>
 
-          background: "rgba(0,0,0,0.55)",
+        Spojujeme stavebníky ve Středočeském kraji.
 
-          padding: "30px",
+      </p>
 
-          borderRadius: "25px",
+      <div style={{ display: "grid", gap: "14px", marginTop: "30px" }}>
 
-          maxWidth: "700px",
+        <button style={btn}>🏢 Firmy</button>
 
-        }}
+        <button style={btn}>👷 Řemeslníci</button>
 
-      >
+        <button style={btn}>🧱 Materiál</button>
 
-        <h1
+        <button style={btn}>📋 Poptávky</button>
 
-          style={{
-
-            fontSize: "64px",
-
-            marginBottom: "10px",
-
-          }}
-
-        >
-
-          Baumarket
-
-        </h1>
-
-        <p
-
-          style={{
-
-            fontSize: "28px",
-
-            marginBottom: "30px",
-
-          }}
-
-        >
-
-          Spojujeme stavebníky ve Středočeském kraji.
-
-        </p>
-
-        <div
-
-          style={{
-
-            display: "flex",
-
-            flexWrap: "wrap",
-
-            gap: "15px",
-
-            marginBottom: "30px",
-
-          }}
-
-        >
-
-          <button style={btn}>🏢 Firmy</button>
-
-          <button style={btn}>👷 Řemeslníci</button>
-
-          <button style={btn}>🏗️ Materiál</button>
-
-          <button style={btn}>📋 Poptávky</button>
-
-          <button style={btn}>📞 Kontakt</button>
-
-        </div>
-
-        <div
-
-          style={{
-
-            background: "white",
-
-            color: "black",
-
-            padding: "25px",
-
-            borderRadius: "20px",
-
-          }}
-
-        >
-
-          <h2 style={{ fontSize: "42px" }}>Nové firmy</h2>
-
-          <p>🏠 Stavby Novák s.r.o.</p>
-
-          <p>⚡ Elektro Kladno</p>
-
-          <p>🪚 Truhlářství Beneš</p>
-
-        </div>
+        <button style={btn}>☎️ Kontakt</button>
 
       </div>
+
+      <section style={card}>
+
+        <h2>⭐ Nové firmy</h2>
+
+        <p>🏠 Stavby Novák s.r.o.</p>
+
+        <p>⚡ Elektro Kladno</p>
+
+        <p>🪚 Truhlářství Beneš</p>
+
+      </section>
 
     </main>
 
@@ -136,16 +64,32 @@ export default function HomePage() {
 
 const btn = {
 
-  background: "#ff7a00",
+  background: "white",
 
-  color: "white",
+  color: "#111827",
 
   border: "none",
 
-  padding: "15px 22px",
+  padding: "18px",
 
-  borderRadius: "14px",
+  borderRadius: "18px",
 
-  fontSize: "20px",
+  fontSize: "22px",
+
+  fontWeight: "bold",
+
+};
+
+const card = {
+
+  background: "white",
+
+  color: "black",
+
+  padding: "24px",
+
+  borderRadius: "24px",
+
+  marginTop: "32px",
 
 };
