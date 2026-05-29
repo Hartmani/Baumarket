@@ -1,0 +1,159 @@
+use client";
+
+import { useState } from "react";
+
+export default function PoptavkaPage() {
+
+  const [odeslano, setOdeslano] = useState(false);
+
+  return (
+
+    <main
+
+      style={{
+
+        minHeight: "100vh",
+
+        padding: "24px",
+
+        background: "#111827",
+
+        color: "white",
+
+        fontFamily: "Arial",
+
+      }}
+
+    >
+
+      <h1 style={{ fontSize: "42px" }}>
+
+        Nová poptávka
+
+      </h1>
+
+      {!odeslano ? (
+
+        <form
+
+          onSubmit={(e) => {
+
+            e.preventDefault();
+
+            setOdeslano(true);
+
+          }}
+
+          style={{
+
+            display: "grid",
+
+            gap: "16px",
+
+            marginTop: "30px",
+
+          }}
+
+        >
+
+          <select style={input}>
+
+            <option>Cihly</option>
+
+            <option>Polystyren</option>
+
+            <option>Okna</option>
+
+          </select>
+
+          <input
+
+            placeholder="Množství"
+
+            style={input}
+
+          />
+
+          <input
+
+            placeholder="Okres"
+
+            style={input}
+
+          />
+
+          <input
+
+            placeholder="Telefon"
+
+            style={input}
+
+          />
+
+          <button style={btn}>
+
+            Odeslat poptávku
+
+          </button>
+
+        </form>
+
+      ) : (
+
+        <div
+
+          style={{
+
+            marginTop: "40px",
+
+            background: "#1f2937",
+
+            padding: "24px",
+
+            borderRadius: "20px",
+
+          }}
+
+        >
+
+          ✅ Poptávka byla odeslána.
+
+        </div>
+
+      )}
+
+    </main>
+
+  );
+
+}
+
+const input = {
+
+  padding: "16px",
+
+  borderRadius: "14px",
+
+  border: "none",
+
+  fontSize: "18px",
+
+};
+
+const btn = {
+
+  padding: "18px",
+
+  borderRadius: "16px",
+
+  border: "none",
+
+  background: "#f97316",
+
+  color: "white",
+
+  fontSize: "20px",
+
+  fontWeight: "bold",
+
+};
