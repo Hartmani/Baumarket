@@ -12,17 +12,25 @@ export default function YtongPage() {
 
     return (
 
-      <main style={{ padding: "20px" }}>
+      <main style={page}>
 
-        <Link href="/">← Zpět na Baumarket</Link>
+        <div style={card}>
 
-        <br />
+          <Link href="/" style={back}>
 
-        <br />
+            ← Zpět na Baumarket
 
-        <h1>Děkujeme ✅</h1>
+          </Link>
 
-        <p>Zařadili jsme vás do hromadné poptávky.</p>
+          <h1 style={successTitle}>🎉 Děkujeme!</h1>
+
+          <p style={successText}>
+
+            Vaše poptávka byla zařazena do hromadného nákupu Ytongu.
+
+          </p>
+
+        </div>
 
       </main>
 
@@ -32,72 +40,254 @@ export default function YtongPage() {
 
   return (
 
-    <main style={{ padding: "20px" }}>
+    <main style={page}>
 
-      <Link href="/">← Zpět na Baumarket</Link>
+      <div style={card}>
 
-      <h1>🧱 Ytong</h1>
+        <Link href="/" style={back}>
 
-      <p>Přidejte se k hromadnému nákupu Ytongu.</p>
+          ← Zpět na Baumarket
 
-      <input
+        </Link>
 
-        placeholder="Počet m²"
+        <div style={badge}>AKTUÁLNÍ KAMPAŇ</div>
 
-        style={{
+        <h1 style={title}>🧱 Ytong</h1>
 
-          width: "100%",
+        <p style={subtitle}>
 
-          padding: "10px",
+          Připojte se k hromadné objednávce a získejte lepší cenu díky většímu
 
-          marginBottom: "10px"
+          objemu nákupu.
 
-        }}
+        </p>
 
-      />
+        <div style={stats}>
 
-      <input
+          <div style={statBox}>
 
-        placeholder="Telefon"
+            <strong>12</strong>
 
-        style={{
+            <span>stavebníků</span>
 
-          width: "100%",
+          </div>
 
-          padding: "10px",
+          <div style={statBox}>
 
-          marginBottom: "10px"
+            <strong>2 450 m²</strong>
 
-        }}
+            <span>aktuálně poptáno</span>
 
-      />
+          </div>
 
-      <button
+        </div>
 
-        onClick={() => setSent(true)}
+        <div style={form}>
 
-        style={{
+          <input style={input} placeholder="Jméno a příjmení" />
 
-          padding: "12px 20px",
+          <input style={input} placeholder="Telefon" />
 
-          background: "green",
+          <input style={input} placeholder="E-mail" />
 
-          color: "white",
+          <input style={input} placeholder="Město / PSČ" />
 
-          border: "none",
+          <input style={input} placeholder="Požadované množství (m²)" />
 
-          borderRadius: "8px"
+          <textarea
 
-        }}
+            style={textarea}
 
-      >
+            placeholder="Poznámka"
 
-        Odeslat poptávku
+          />
 
-      </button>
+          <button
+
+            style={button}
+
+            onClick={() => setSent(true)}
+
+          >
+
+            Přidat do hromadné poptávky
+
+          </button>
+
+        </div>
+
+      </div>
 
     </main>
 
   );
 
 }
+
+const page = {
+
+  minHeight: "100vh",
+
+  background: "#f3f4f6",
+
+  padding: "20px",
+
+  fontFamily: "Arial, sans-serif",
+
+};
+
+const card = {
+
+  maxWidth: "700px",
+
+  margin: "0 auto",
+
+  background: "white",
+
+  borderRadius: "28px",
+
+  padding: "24px",
+
+  boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
+
+};
+
+const back = {
+
+  textDecoration: "none",
+
+  color: "#f97316",
+
+  fontWeight: "bold",
+
+};
+
+const badge = {
+
+  display: "inline-block",
+
+  background: "#f97316",
+
+  color: "white",
+
+  padding: "8px 12px",
+
+  borderRadius: "999px",
+
+  fontSize: "12px",
+
+  fontWeight: "bold",
+
+  marginTop: "16px",
+
+};
+
+const title = {
+
+  fontSize: "42px",
+
+  marginBottom: "10px",
+
+};
+
+const subtitle = {
+
+  color: "#4b5563",
+
+  fontSize: "18px",
+
+  lineHeight: "1.4",
+
+};
+
+const stats = {
+
+  display: "grid",
+
+  gridTemplateColumns: "1fr 1fr",
+
+  gap: "12px",
+
+  marginTop: "20px",
+
+  marginBottom: "20px",
+
+};
+
+const statBox = {
+
+  background: "#f3f4f6",
+
+  padding: "16px",
+
+  borderRadius: "16px",
+
+  textAlign: "center" as const,
+
+};
+
+const form = {
+
+  display: "grid",
+
+  gap: "12px",
+
+};
+
+const input = {
+
+  padding: "14px",
+
+  borderRadius: "12px",
+
+  border: "1px solid #d1d5db",
+
+  fontSize: "16px",
+
+};
+
+const textarea = {
+
+  padding: "14px",
+
+  borderRadius: "12px",
+
+  border: "1px solid #d1d5db",
+
+  minHeight: "100px",
+
+  fontSize: "16px",
+
+};
+
+const button = {
+
+  background: "#f97316",
+
+  color: "white",
+
+  border: "none",
+
+  borderRadius: "16px",
+
+  padding: "16px",
+
+  fontSize: "18px",
+
+  fontWeight: "bold",
+
+};
+
+const successTitle = {
+
+  fontSize: "36px",
+
+};
+
+const successText = {
+
+  fontSize: "18px",
+
+  color: "#4b5563",
+
+};
