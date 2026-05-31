@@ -53,11 +53,53 @@ export default function Home() {
               <button style={card}>🪵<br />Střešní řezivo</button>
 
             </a>
-<a href="/pro-dodavatele" style={link}>
+<a
 
-  <button style={card}>🤝<br />Pro dodavatele</button>
+  href="/pro-dodavatele"
 
-    </a>
+  style={{
+
+    display: "block",
+
+    marginTop: "20px",
+
+    textDecoration: "none"
+
+  }}
+
+>
+
+  <button
+
+    style={{
+
+      width: "100%",
+
+      padding: "18px",
+
+      borderRadius: "18px",
+
+      border: "none",
+
+      background: "#f97316",
+
+      color: "white",
+
+      fontSize: "22px",
+
+      fontWeight: "bold",
+
+      cursor: "pointer"
+
+    }}
+
+  >
+
+    🤝 Staňte se dodavatelem Baumarketu
+
+  </button>
+
+</a>
           </div>
 
         </div>
