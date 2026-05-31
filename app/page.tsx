@@ -2,51 +2,89 @@ export default function Home() {
 
   return (
 
-    <main style={{ minHeight: "100vh", padding: "24px", fontFamily: "Arial" }}>
+    <main style={page}>
 
-      <h1>🏗️ Baumarket</h1>
+      <section style={hero}>
 
-      <p>Hromadné nákupy stavebního materiálu za lepší ceny.</p>
+        <div style={overlay}>
 
-      <a href="/ytong">
+          <h1 style={title}>Baumarket</h1>
 
-        <button style={btn}>🧱 Ytong</button>
+          <p style={subtitle}>
 
-      </a>
+            Spojujeme stavebníky pro hromadné nákupy stavebního materiálu.
 
-      <a href="/porotherm">
+          </p>
 
-        <button style={btn}>🧱 Porotherm</button>
+          <div style={grid}>
 
-      </a>
+            <a href="/ytong" style={link}>
 
-      <a href="/strecha">
+              <button style={card}>🧱<br />Ytong</button>
 
-        <button style={btn}>🏠 Střešní krytiny</button>
+            </a>
 
-      </a>
+            <a href="/porotherm" style={link}>
 
-      <a href="/izolace">
+              <button style={card}>🧱<br />Porotherm</button>
 
-        <button style={btn}>🧊 Izolace</button>
+            </a>
 
-      </a>
+            <a href="/strecha" style={link}>
 
-      <section style={{ marginTop: "30px" }}>
+              <button style={card}>🏠<br />Střešní krytiny</button>
 
-        <h2>Jak to funguje?</h2>
+            </a>
 
-        <ol>
+            <a href="/izolace" style={link}>
 
-          <li>Vyberete materiál.</li>
+              <button style={card}>🧊<br />Izolace</button>
 
-          <li>Zadáte množství a kontakt.</li>
+            </a>
 
-          <li>Spojíme více zájemců.</li>
+            <a href="/sadrokarton" style={link}>
 
-          <li>Vyjednáme lepší cenu u dodavatele.</li>
+              <button style={card}>📐<br />Sádrokarton</button>
 
-        </ol>
+            </a>
+
+            <a href="/rezivo" style={link}>
+
+              <button style={card}>🪵<br />Střešní řezivo</button>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section style={infoBox}>
+
+        <h2 style={infoTitle}>Jak Baumarket funguje?</h2>
+
+        <p style={infoText}>
+
+          Vyberete materiál, zadáte přibližné množství a lokalitu.
+
+          Baumarket spojí více stavebníků do jedné větší poptávky.
+
+          Díky vyššímu objemu pak můžeme oslovit dodavatele a vyjednat lepší cenu.
+
+        </p>
+
+        <div style={steps}>
+
+          <div style={step}>1<br />Vyberete materiál</div>
+
+          <div style={step}>2<br />Zadáte množství</div>
+
+          <div style={step}>3<br />Spojíme poptávky</div>
+
+          <div style={step}>4<br />Vyjednáme cenu</div>
+
+        </div>
 
       </section>
 
@@ -56,26 +94,162 @@ export default function Home() {
 
 }
 
-const btn = {
+const page = {
 
-  display: "block",
+  minHeight: "100vh",
 
-  width: "100%",
+  fontFamily: "Arial, sans-serif",
 
-  padding: "18px",
+  background: "#f3f4f6",
 
-  marginBottom: "14px",
+};
 
-  fontSize: "22px",
+const hero = {
 
-  borderRadius: "14px",
+  minHeight: "72vh",
 
-  border: "none",
+  padding: "24px",
 
-  background: "#111827",
+  backgroundImage:
+
+    "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80')",
+
+  backgroundSize: "cover",
+
+  backgroundPosition: "center",
+
+};
+
+const overlay = {
+
+  background: "rgba(17, 24, 39, 0.72)",
+
+  borderRadius: "28px",
+
+  padding: "28px",
 
   color: "white",
 
+  maxWidth: "720px",
+
+  margin: "0 auto",
+
+};
+
+const title = {
+
+  fontSize: "56px",
+
+  margin: "0 0 16px",
+
+};
+
+const subtitle = {
+
+  fontSize: "22px",
+
+  lineHeight: "1.35",
+
+  marginBottom: "28px",
+
+};
+
+const grid = {
+
+  display: "grid",
+
+  gridTemplateColumns: "1fr 1fr",
+
+  gap: "14px",
+
+};
+
+const link = {
+
+  textDecoration: "none",
+
+};
+
+const card = {
+
+  width: "100%",
+
+  minHeight: "118px",
+
+  borderRadius: "22px",
+
+  border: "none",
+
+  background: "white",
+
+  color: "#111827",
+
+  fontSize: "20px",
+
   fontWeight: "bold",
+
+  boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+
+};
+
+const infoBox = {
+
+  margin: "24px",
+
+  marginTop: "-30px",
+
+  background: "white",
+
+  borderRadius: "24px",
+
+  padding: "24px",
+
+  boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
+
+};
+
+const infoTitle = {
+
+  fontSize: "28px",
+
+  marginTop: 0,
+
+};
+
+const infoText = {
+
+  color: "#4b5563",
+
+  fontSize: "17px",
+
+  lineHeight: "1.45",
+
+};
+
+const steps = {
+
+  display: "grid",
+
+  gridTemplateColumns: "1fr 1fr",
+
+  gap: "12px",
+
+  marginTop: "18px",
+
+};
+
+const step = {
+
+  background: "#f97316",
+
+  color: "white",
+
+  padding: "14px",
+
+  borderRadius: "16px",
+
+  fontWeight: "bold",
+
+  textAlign: "center" as const,
 
 };
