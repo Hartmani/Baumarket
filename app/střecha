@@ -1,0 +1,33 @@
+export default function StrechaPage() {
+
+  return (
+
+    <main style={{ padding: "24px", fontFamily: "Arial" }}>
+
+      <h1>🏠 Střešní krytiny</h1>
+
+      <p>Hromadný nákup střešních krytin.</p>
+
+      <input placeholder="Jméno" />
+
+      <br /><br />
+
+      <input placeholder="Telefon" />
+
+      <br /><br />
+
+      <input placeholder="E-mail" />
+
+      <br /><br />
+
+      <input placeholder="Plocha střechy v m²" />
+
+      <br /><br />
+
+      <button>Přidat se k nákupu</button>
+
+    </main>
+
+  );
+
+}
