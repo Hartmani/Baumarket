@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 
 import { useState } from "react";
@@ -11,19 +12,17 @@ export default function YtongPage() {
 
     return (
 
-      <main style={page}>
-      <Link href="/">
+      <main style={{ padding: "20px" }}>
 
-  ← Zpět na Baumarket
+        <Link href="/">← Zpět na Baumarket</Link>
 
-</Link>
+        <br />
 
-<br />
+        <br />
 
-<br />
         <h1>Děkujeme ✅</h1>
 
-        <p>Zařadili jsme vás do hromadné poptávky Ytong.</p>
+        <p>Zařadili jsme vás do hromadné poptávky.</p>
 
       </main>
 
@@ -33,88 +32,72 @@ export default function YtongPage() {
 
   return (
 
-    <main style={page}>
+    <main style={{ padding: "20px" }}>
 
-      <h1>Ytong 300</h1>
+      <Link href="/">← Zpět na Baumarket</Link>
 
-      <p>Přidejte se k hromadnému nákupu.</p>
+      <h1>🧱 Ytong</h1>
 
-      <form
+      <p>Přidejte se k hromadnému nákupu Ytongu.</p>
 
-        onSubmit={(e) => {
+      <input
 
-          e.preventDefault();
+        placeholder="Počet m²"
 
-          setSent(true);
+        style={{
+
+          width: "100%",
+
+          padding: "10px",
+
+          marginBottom: "10px"
 
         }}
 
-        style={{ display: "grid", gap: "14px", marginTop: "24px" }}
+      />
+
+      <input
+
+        placeholder="Telefon"
+
+        style={{
+
+          width: "100%",
+
+          padding: "10px",
+
+          marginBottom: "10px"
+
+        }}
+
+      />
+
+      <button
+
+        onClick={() => setSent(true)}
+
+        style={{
+
+          padding: "12px 20px",
+
+          background: "green",
+
+          color: "white",
+
+          border: "none",
+
+          borderRadius: "8px"
+
+        }}
 
       >
 
-        <input style={input} placeholder="Jméno" required />
+        Odeslat poptávku
 
-        <input style={input} placeholder="Telefon" required />
-
-        <input style={input} placeholder="Email" required />
-
-        <input style={input} placeholder="Množství, např. 12 palet" required />
-
-        <input style={input} placeholder="Město / okres" required />
-
-        <textarea style={input} placeholder="Poznámka" rows={5} />
-
-        <button style={button}>Přidat se k nákupu</button>
-
-      </form>
+      </button>
 
     </main>
 
   );
 
 }
-
-const page = {
-
-  minHeight: "100vh",
-
-  padding: "24px",
-
-  fontFamily: "Arial",
-
-  background: "#111827",
-
-  color: "white",
-
-};
-
-const input = {
-
-  padding: "16px",
-
-  borderRadius: "14px",
-
-  border: "none",
-
-  fontSize: "18px",
-
-};
-
-const button = {
-
-  padding: "18px",
-
-  borderRadius: "16px",
-
-  border: "none",
-
-  background: "#f97316",
-
-  color: "white",
-
-  fontSize: "20px",
-
-  fontWeight: "bold",
-
-};
