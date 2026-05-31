@@ -2,7 +2,7 @@ export default function Home() {
 
   return (
 
-    <main style={{ minHeight: "100vh", padding: "24px", fontFamily: "Arial", background: "#f4f6f8" }}>
+    <main style={{ minHeight: "100vh", padding: "24px", fontFamily: "Arial" }}>
 
       <h1>🏗️ Baumarket</h1>
 
@@ -14,23 +14,39 @@ export default function Home() {
 
       </a>
 
-      <button style={btn}>🧱 Porotherm</button>
+      <a href="/porotherm">
 
-      <button style={btn}>🏠 Střešní krytiny</button>
+        <button style={btn}>🧱 Porotherm</button>
 
-      <button style={btn}>🧊 Izolace</button>
+      </a>
 
-      <button style={btn}>🪟 Okna</button>
+      <a href="/strecha">
 
-      <section style={{ marginTop: "30px", background: "white", padding: "20px", borderRadius: "16px" }}>
+        <button style={btn}>🏠 Střešní krytiny</button>
+
+      </a>
+
+      <a href="/izolace">
+
+        <button style={btn}>🧊 Izolace</button>
+
+      </a>
+
+      <section style={{ marginTop: "30px" }}>
 
         <h2>Jak to funguje?</h2>
 
-        <p>1. Vyberete materiál.</p>
+        <ol>
 
-        <p>2. Přidáte se k hromadné poptávce.</p>
+          <li>Vyberete materiál.</li>
 
-        <p>3. Baumarket spojí objem a vyjedná lepší cenu.</p>
+          <li>Zadáte množství a kontakt.</li>
+
+          <li>Spojíme více zájemců.</li>
+
+          <li>Vyjednáme lepší cenu u dodavatele.</li>
+
+        </ol>
 
       </section>
 
@@ -42,11 +58,13 @@ export default function Home() {
 
 const btn = {
 
+  display: "block",
+
   width: "100%",
 
-  marginTop: "14px",
-
   padding: "18px",
+
+  marginBottom: "14px",
 
   fontSize: "22px",
 
@@ -57,5 +75,7 @@ const btn = {
   background: "#111827",
 
   color: "white",
+
+  fontWeight: "bold",
 
 };
