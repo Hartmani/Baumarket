@@ -53,7 +53,11 @@ export default function Home() {
               <button style={card}>🪵<br />Střešní řezivo</button>
 
             </a>
+<a href="/pro-dodavatele" style={link}>
 
+  <button style={card}>🤝<br />Pro dodavatele</button>
+
+    </a>
           </div>
 
         </div>
