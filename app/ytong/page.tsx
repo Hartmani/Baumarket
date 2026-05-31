@@ -12,7 +12,7 @@ export default function YtongPage() {
     return (
 
       <main style={page}>
-<Link href="/">
+  <Link href="/">
 
   ← Zpět na Baumarket
 
