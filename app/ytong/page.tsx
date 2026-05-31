@@ -1,4 +1,4 @@
-"use client";
+"use client";import Link from "next/link";
 
 import { useState } from "react";
 
@@ -11,7 +11,15 @@ export default function YtongPage() {
     return (
 
       <main style={page}>
+<Link href="/">
 
+  ← Zpět na Baumarket
+
+</Link>
+
+<br />
+
+<br />
         <h1>Děkujeme ✅</h1>
 
         <p>Zařadili jsme vás do hromadné poptávky Ytong.</p>
