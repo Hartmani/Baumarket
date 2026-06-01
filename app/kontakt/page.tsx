@@ -44,13 +44,11 @@ export default function KontaktPage() {
 
           style={{
 
-            color: "#ea580c",
+            color: "#f97316",
 
             textDecoration: "none",
 
-            fontWeight: "bold",
-
-            fontSize: "20px",
+            fontWeight: "700",
 
           }}
 
@@ -64,9 +62,9 @@ export default function KontaktPage() {
 
           style={{
 
-            fontSize: "58px",
+            fontSize: "56px",
 
-            marginTop: "30px",
+            marginTop: "20px",
 
             marginBottom: "20px",
 
@@ -74,7 +72,7 @@ export default function KontaktPage() {
 
         >
 
-          ✉️ Kontakt
+          📞 Kontakt
 
         </h1>
 
@@ -82,21 +80,19 @@ export default function KontaktPage() {
 
           style={{
 
-            fontSize: "20px",
+            fontSize: "24px",
 
             color: "#4b5563",
 
-            lineHeight: "1.8",
+            lineHeight: "1.7",
 
           }}
 
         >
 
-          Máte dotaz k hromadným nákupům stavebního materiálu?
+          Máte dotaz k hromadné poptávce nebo spolupráci?
 
-          Chcete se stát partnerem nebo dodavatelem?
-
-          Kontaktujte nás.
+          Ozvěte se nám.
 
         </p>
 
@@ -104,85 +100,23 @@ export default function KontaktPage() {
 
           style={{
 
-            background: "#f9fafb",
-
-            padding: "25px",
-
-            borderRadius: "20px",
-
             marginTop: "30px",
 
-          }}
-
-        >
-
-          <h2>Kontaktní údaje</h2>
-
-          <p>
-
-            📧 Email:
-
-            <br />
-
-            info@baumarket.cz
-
-          </p>
-
-          <p>
-
-            📱 Telefon:
-
-            <br />
-
-            +420 777 000 000
-
-          </p>
-
-          <p>
-
-            🌍 Web:
-
-            <br />
-
-            www.baumarket.cz
-
-          </p>
-
-        </div>
-
-        <div
-
-          style={{
-
-            background: "#fff7ed",
+            background: "#f8fafc",
 
             padding: "25px",
 
             borderRadius: "20px",
 
-            marginTop: "25px",
-
           }}
 
         >
 
-          <h2>Pro dodavatele</h2>
+          <p><strong>Email:</strong> info@baumarket.cz</p>
 
-          <p
+          <p><strong>Telefon:</strong> +420 777 777 777</p>
 
-            style={{
-
-              lineHeight: "1.8",
-
-            }}
-
-          >
-
-            Pokud jste výrobce nebo prodejce stavebního materiálu,
-
-            rádi s vámi probereme možnosti spolupráce.
-
-          </p>
+          <p><strong>Lokalita:</strong> Česká republika</p>
 
         </div>
 
