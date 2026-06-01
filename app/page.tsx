@@ -99,7 +99,57 @@ export default function Home() {
 
   </button>
 
+</a></a>
+
+<a
+
+  href="/kontakt"
+
+  style={{
+
+    display: "block",
+
+    marginTop: "20px",
+
+    textDecoration: "none"
+
+  }}
+
+>
+
+  <button
+
+    style={{
+
+      width: "100%",
+
+      padding: "18px",
+
+      borderRadius: "18px",
+
+      border: "none",
+
+      background: "#2563eb",
+
+      color: "white",
+
+      fontSize: "22px",
+
+      fontWeight: "bold",
+
+      cursor: "pointer"
+
+    }}
+
+  >
+
+    📞 Kontakt
+
+  </button>
+
 </a>
+
+</div>
           </div>
 
         </div>
