@@ -4,9 +4,95 @@ import Link from "next/link";
 
 import { useState } from "react";
 
+const WEB_APP_URL = "SEM_POZDĚJI_VLOŽÍME_ODKAZ_Z_GOOGLE_SCRIPTU";
+
 export default function YtongPage() {
 
   const [sent, setSent] = useState(false);
+
+  const [sending, setSending] = useState(false);
+
+  const [form, setForm] = useState({
+
+    name: "",
+
+    phone: "",
+
+    email: "",
+
+    location: "",
+
+    amount: "",
+
+    note: "",
+
+  });
+
+  function update(field: string, value: string) {
+
+    setForm({ ...form, [field]: value });
+
+  }
+
+  async function submitForm() {
+
+    if (!form.name || !form.phone || !form.location || !form.amount) {
+
+      alert("Vyplňte prosím jméno, telefon, město/PSČ a množství.");
+
+      return;
+
+    }
+
+    setSending(true);
+
+    try {
+
+      await fetch(WEB_APP_URL, {
+
+        method: "POST",
+
+        mode: "no-cors",
+
+        headers: {
+
+          "Content-Type": "text/plain",
+
+        },
+
+        body: JSON.stringify({
+
+          material: "Ytong",
+
+          name: form.name,
+
+          phone: form.phone,
+
+          email: form.email,
+
+          location: form.location,
+
+          amount: form.amount,
+
+          note: form.note,
+
+          createdAt: new Date().toISOString(),
+
+        }),
+
+      });
+
+      setSent(true);
+
+    } catch (error) {
+
+      alert("Poptávku se nepodařilo odeslat. Zkuste to prosím znovu.");
+
+    }
+
+    setSending(false);
+
+  }
 
   if (sent) {
 
@@ -56,9 +142,9 @@ export default function YtongPage() {
 
         <p style={subtitle}>
 
-          Připojte se k hromadné objednávce a získejte lepší cenu díky většímu
+          Připojte se k hromadné objednávce Ytongu a získejte lepší cenu díky
 
-          objemu nákupu.
+          většímu objemu nákupu.
 
         </p>
 
@@ -82,17 +168,67 @@ export default function YtongPage() {
 
         </div>
 
-        <div style={form}>
+        <div style={formBox}>
 
-          <input style={input} placeholder="Jméno a příjmení" />
+          <input
 
-          <input style={input} placeholder="Telefon" />
+            style={input}
 
-          <input style={input} placeholder="E-mail" />
+            placeholder="Jméno a příjmení"
 
-          <input style={input} placeholder="Město / PSČ" />
+            value={form.name}
 
-          <input style={input} placeholder="Požadované množství (m²)" />
+            onChange={(e) => update("name", e.target.value)}
+
+          />
+
+          <input
+
+            style={input}
+
+            placeholder="Telefon"
+
+            value={form.phone}
+
+            onChange={(e) => update("phone", e.target.value)}
+
+          />
+
+          <input
+
+            style={input}
+
+            placeholder="E-mail"
+
+            value={form.email}
+
+            onChange={(e) => update("email", e.target.value)}
+
+          />
+
+          <input
+
+            style={input}
+
+            placeholder="Město / PSČ"
+
+            value={form.location}
+
+            onChange={(e) => update("location", e.target.value)}
+
+          />
+
+          <input
+
+            style={input}
+
+            placeholder="Požadované množství"
+
+            value={form.amount}
+
+            onChange={(e) => update("amount", e.target.value)}
+
+          />
 
           <textarea
 
@@ -100,17 +236,15 @@ export default function YtongPage() {
 
             placeholder="Poznámka"
 
+            value={form.note}
+
+            onChange={(e) => update("note", e.target.value)}
+
           />
 
-          <button
+          <button style={button} onClick={submitForm} disabled={sending}>
 
-            style={button}
-
-            onClick={() => setSent(true)}
-
-          >
-
-            Přidat do hromadné poptávky
+            {sending ? "Odesílám..." : "Přidat do hromadné poptávky"}
 
           </button>
 
@@ -226,7 +360,7 @@ const statBox = {
 
 };
 
-const form = {
+const formBox = {
 
   display: "grid",
 
